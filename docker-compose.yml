@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  tg-spamer:
+    build: .
+    container_name: tg-spamer
+    volumes:
+      - ./files:/app/files
+    env_file:
+      - .env
+    restart: unless-stopped 
